@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click & Wash - Lavandería Profesional por Encargo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <header class="hero-section">
+        <a href="index.html" class="btn-goto-panel">
+            <i class="fas fa-list-check"></i> Pedidos
+        </a>
+        
+        <div class="hero-content">
+            <p class="tagline">LAVA TU ROPA EN CLICK & WASH</p>
+            <h1 class="main-title">LAVANDERÍA PROFESIONAL POR ENCARGO</h1>
+            
+            <a href="#servicios-section" class="btn btn-services">Servicios</a>
+            
+        </div>
+    </header>
+
+    <section class="benefits-section">
+        <h2 class="section-title-benefits">CUIDAMOS TU ROPA<br>CUIDAMOS TU TIEMPO</h2>
+        
+        <div class="benefits-grid">
+            
+            <div class="benefit-card">
+                <img src="iconos/lavadora.png" alt="Icono de la lavanderia" class="benefit-icon">
+                <h3>POTENCIA Y CUIDADO</h3>
+                <p>Equipos de alta gama que aseguran una limpieza profunda, secado eficiente y cuidado de las fibras.</p>
+            </div>
+
+            <div class="benefit-card">
+                <img src="iconos/cuidado.png" alt="Icono de cuidado" class="benefit-icon">
+                <h3>CUIDADO EXPERTO</h3>
+                <p>Nuestros expertos clasifican tu ropa y seleccionan el programa ideal para proteger colores y blancos.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <img src="iconos/cobija.png" alt="Icono Cobija " class="benefit-icon">
+                <h3>GRAN CAPACIDAD</h3>
+                <p>Lavamos hasta 21 kg por carga, perfecto para edredones, cobijas y grandes volúmenes.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <img src="iconos/detergente.png" alt="Icono detergente" class="benefit-icon">
+                <h3>HIGIENE ASEGURADA</h3>
+                <p>Usamos detergente, suavizante y tratamiento bactericida incluido para garantizar la máxima higiene.</p>
+            </div>
+
+            <div class="benefit-card">
+                <img src="iconos/rastreo.png" alt="Icono Rastreo" class="benefit-icon">
+                <h3>RASTREO EN TIEMPO REAL</h3>
+                <p>Rastrea el estatus de tu ropa con notificaciones y visualiza el progreso desde la recolección hasta la entrega.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios-section" class="services-section">
+        <h2 class="section-title">SERVICIOS</h2>
+        
+        <div class="services-options">
+            
+            <a id="service-docena" class="service-card" style="cursor: pointer;">
+                <img src="iconos/ropa-limpia.png" alt="Icono Docena" class="card-icon">
+                <h4>Lavado de ropa por docena</h4>
+                <p>Ideal para tu ropa del día a día</p>
+            </a>
+            
+
+            <a id="service-especiales" class="service-card" style="cursor: pointer;">
+                <img src="iconos/traje.png" alt="Icono Especiales" class="card-icon">
+                <h4>Lavado de prendas especiales</h4>
+                <p>Para artículos delicados</p>
+            </a>
+
+
+            <a id="service-edredones" class="service-card" style="cursor: pointer;">
+                <img src="iconos/cama.png" alt="Icono Edredones" class="card-icon">
+                <h4>Edredones y cobijas</h4>
+                <p>Para artículos grandes de cama</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <div id="solicitudModal" class="modal-overlay">
+        
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h3 id="modalTitle" class="modal-title"></h3>
+                <button class="close-btn" onclick="cerrarModal()">&times;</button>
+            </div>
+            
+            <p id="modalDescription" class="modal-description"></p>
+            <hr class="modal-divider">
+
+            <div class="quantity-selector-container">
+                
+                <label for="quantity-input" class="quantity-prompt">¿Cuánta ropa es?</label>
+                
+                <div class="quantity-control">
+                    <button id="btnMinus" class="quantity-btn minus-btn">-</button>
+                    <span id="quantityValue" class="quantity-value">1</span>
+                    <button id="btnPlus" class="quantity-btn plus-btn">+</button>
+                </div>
+                
+                <p id="priceDisplay" class="price-display">Precio por [unidad]: $0.00</p>
+            </div>
+
+            <button id="btnContinue" class="btn btn-primary btn-modal-continue">Continuar con la recolección</button>
+        </div>
+    </div>
+</body>
+</html>
